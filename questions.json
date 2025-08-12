@@ -1,0 +1,75 @@
+[
+    {
+        "id": "organisation",
+        "title": "Datenschutzorganisation",
+        "questions": [
+            "Gibt es eine Datenschutzstrategie?",
+            "Sind Verantwortlichkeiten klar geregelt?",
+            "Existiert ein Datenschutzteam?"
+        ]
+    },
+    {
+        "id": "recht",
+        "title": "Rechtsgrundlagen",
+        "questions": [
+            "Werden die Rechtsgrundlagen regelmäßig geprüft?",
+            "Gibt es eine Dokumentation der Einwilligungen?",
+            "Werden Verträge mit Auftragsverarbeitern geprüft?",
+            "Ist die Datenschutzerklärung aktuell?"
+        ]
+    },
+    {
+        "id": "prozesse",
+        "title": "Prozesse & Verfahren",
+        "questions": [
+            "Sind Prozesse zur Datenverarbeitung dokumentiert?",
+            "Gibt es regelmäßige Überprüfungen der Verfahren?",
+            "Werden Änderungen dokumentiert?"
+        ]
+    },
+    {
+        "id": "technisch",
+        "title": "Technische & organisatorische Maßnahmen",
+        "questions": [
+            "Sind personenbezogene Daten verschlüsselt?",
+            "Gibt es Zugriffsbeschränkungen?",
+            "Werden IT-Systeme regelmäßig geprüft?"
+        ]
+    },
+    {
+        "id": "mitarbeiter",
+        "title": "Mitarbeiterkompetenz",
+        "questions": [
+            "Werden Mitarbeitende regelmäßig zum Datenschutz geschult?",
+            "Gibt es Sensibilisierungsmaßnahmen?",
+            "Existiert ein Meldeweg für Datenschutzverstöße?"
+        ]
+    },
+    {
+        "id": "betroffenenrechte",
+        "title": "Betroffenenrechte",
+        "questions": [
+            "Werden Auskunftsanfragen zeitnah bearbeitet?",
+            "Gibt es einen Prozess zur Datenlöschung?",
+            "Sind die Rechte der Betroffenen kommuniziert?"
+        ]
+    },
+    {
+        "id": "risiko",
+        "title": "Risiko & Vorfälle",
+        "questions": [
+            "Werden Datenschutzvorfälle dokumentiert?",
+            "Existiert ein Notfallplan?",
+            "Gibt es eine Risikoanalyse?"
+        ]
+    },
+    {
+        "id": "kontrolle",
+        "title": "Kontrolle & Audit",
+        "questions": [
+            "Werden Datenschutzmaßnahmen regelmäßig überprüft?",
+            "Gibt es interne oder externe Audits?",
+            "Werden Ergebnisse dokumentiert?"
+        ]
+    }
+]

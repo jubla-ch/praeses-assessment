@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Selbstbewertung Datenschutz</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="assets/chart.min.js"></script>
+    <!-- jsPDF -->
+    <script src="assets/jspdf.umd.min.js"></script>
+    <!-- html2canvas -->
+    <script src="assets/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>Selbstbewertung Datenschutz</h1>
+    <form id="survey-form"></form>
+    <div class="button-group">
+        <button id="submit-btn" type="button">Auswertung anzeigen</button>
+        <button id="pdf-btn" type="button">Ergebnisse als PDF exportieren</button>
+        <button id="save-btn" type="button">Fortschritt speichern</button>
+        <button id="clear-btn" type="button">Fortschritt löschen</button>
+        <button id="link-btn" type="button">Link zum Fortschritt erzeugen</button>
+    </div>
+    <div id="chart-container">
+        <canvas id="results-chart" width="400" height="400"></canvas>
+    </div>
+    <div id="feedback"></div>
+    <script src="survey.js"></script>
+</body>
+</html>

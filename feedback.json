@@ -1,0 +1,42 @@
+{
+    "organisation": {
+        "low": "Ihre Datenschutzorganisation ist verbesserungsfähig. Klären Sie Zuständigkeiten und etablieren Sie Prozesse.",
+        "medium": "Ihre Organisation ist teilweise strukturiert. Prüfen Sie, ob alle Verantwortlichkeiten klar definiert sind.",
+        "high": "Ihre Organisation ist gut aufgestellt. Halten Sie die Prozesse aktuell."
+    },
+    "recht": {
+        "low": "Die Rechtsgrundlagen werden nicht ausreichend beachtet. Prüfen Sie Einwilligungen und Vertragsdokumentation.",
+        "medium": "Die Rechtsgrundlagen sind teilweise beachtet. Aktualisieren Sie die Datenschutzerklärung und Verträge.",
+        "high": "Die Rechtsgrundlagen sind sehr gut umgesetzt. Halten Sie die Dokumentation aktuell."
+    },
+    "prozesse": {
+        "low": "Prozesse sind nicht dokumentiert. Etablieren Sie klare Verfahren und regelmäßige Überprüfungen.",
+        "medium": "Prozesse werden teilweise dokumentiert. Optimieren Sie die Dokumentation und Kontrolle.",
+        "high": "Prozesse sind gut dokumentiert. Halten Sie die Verfahren aktuell."
+    },
+    "technisch": {
+        "low": "Technische Maßnahmen sind unzureichend. Prüfen Sie Verschlüsselung und Zugriffsbeschränkungen.",
+        "medium": "Technische Maßnahmen sind teilweise umgesetzt. Verstärken Sie die IT-Sicherheit.",
+        "high": "Technische Maßnahmen sind sehr gut. Überprüfen Sie regelmäßig die Systeme."
+    },
+    "mitarbeiter": {
+        "low": "Mitarbeiter sind nicht ausreichend geschult. Führen Sie Trainings und Sensibilisierungen durch.",
+        "medium": "Schulungen finden gelegentlich statt. Verbessern Sie die Sensibilisierung.",
+        "high": "Mitarbeiter sind gut geschult. Halten Sie das Niveau."
+    },
+    "betroffenenrechte": {
+        "low": "Betroffenenrechte werden nicht ausreichend gewahrt. Etablieren Sie Prozesse für Anfragen und Löschung.",
+        "medium": "Betroffenenrechte sind teilweise umgesetzt. Optimieren Sie die Kommunikation und Abläufe.",
+        "high": "Betroffenenrechte sind sehr gut umgesetzt. Pflegen Sie die Prozesse weiter."
+    },
+    "risiko": {
+        "low": "Risikomanagement ist unzureichend. Dokumentieren Sie Vorfälle und erstellen Sie Notfallpläne.",
+        "medium": "Risikomanagement ist teilweise vorhanden. Optimieren Sie Analyse und Planung.",
+        "high": "Risikomanagement ist sehr gut. Halten Sie die Maßnahmen aktuell."
+    },
+    "kontrolle": {
+        "low": "Kontrollen finden kaum statt. Führen Sie regelmäßige Audits und Dokumentationen ein.",
+        "medium": "Kontrollen werden gelegentlich durchgeführt. Verbessern Sie die Überprüfung.",
+        "high": "Kontrollen sind sehr gut. Dokumentieren Sie weiterhin die Ergebnisse."
+    }
+}
