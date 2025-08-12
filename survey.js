@@ -71,7 +71,7 @@ function showRadarChart(questions, scores) {
         data: {
             labels: questions.map(t => t.title),
             datasets: [{
-                label: 'Ihre Bewertung',
+                label: 'Ergebnisse',
                 data: scores,
                 backgroundColor: 'rgba(44, 130, 201, 0.2)',
                 borderColor: 'rgba(44, 130, 201, 1)',
@@ -158,7 +158,7 @@ async function exportPDF(questions, scores, feedback) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     doc.setFontSize(18);
-    doc.text("Ihre Datenschutz Selbstbewertung", 10, 15);
+    doc.text("Selbsteinschätzung für Präses mit Spider-Auswertung", 10, 15);
 
     // Capture chart as image
     const chartCanvas = document.getElementById('results-chart');
