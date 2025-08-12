@@ -5,7 +5,7 @@ async function loadData() {
     return { questions, feedback };
 }
 
-// Render the survey grouped by topic
+// Render the survey grouped by topic using sliders
 function renderSurvey(questions) {
     const form = document.getElementById('survey-form');
     form.innerHTML = '';
@@ -13,19 +13,33 @@ function renderSurvey(questions) {
         const topicDiv = document.createElement('div');
         topicDiv.innerHTML = `<h2>${topic.title}</h2>`;
         topic.questions.forEach((q, qIdx) => {
+            const sliderId = `t${tIdx}q${qIdx}`;
             topicDiv.innerHTML += `
                 <label>${q}</label>
-                <select id="t${tIdx}q${qIdx}">
-                    <option value="1">1 - trifft nicht zu</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 - trifft voll zu</option>
-                </select>
+                <div class="slider-group">
+                  <span>1<br><small>(trifft nicht zu)</small></span>
+                  <input type="range" min="1" max="5" value="3" id="${sliderId}" name="${sliderId}" class="slider">
+                  <span>5<br><small>(trifft voll zu)</small></span>
+                  <span id="${sliderId}-value" class="slider-value">3</span>
+                </div>
                 <br/>
             `;
         });
         form.appendChild(topicDiv);
+    });
+
+    // Attach input listeners to update displayed value
+    questions.forEach((topic, tIdx) => {
+        topic.questions.forEach((_, qIdx) => {
+            const sliderId = `t${tIdx}q${qIdx}`;
+            const slider = document.getElementById(sliderId);
+            const valueSpan = document.getElementById(`${sliderId}-value`);
+            if (slider && valueSpan) {
+                slider.addEventListener("input", () => {
+                    valueSpan.textContent = slider.value;
+                });
+            }
+        });
     });
 }
 
@@ -98,6 +112,7 @@ function loadProgress(questions) {
         answers.forEach((topicAnswers, tIdx) => {
             topicAnswers.forEach((val, qIdx) => {
                 document.getElementById(`t${tIdx}q${qIdx}`).value = val;
+                document.getElementById(`t${tIdx}q${qIdx}-value`).textContent = val;
             });
         });
     }
@@ -130,7 +145,9 @@ function loadFromUrl(questions) {
         let idx = 0;
         questions.forEach((topic, tIdx) => {
             topic.questions.forEach((_, qIdx) => {
-                document.getElementById(`t${tIdx}q${qIdx}`).value = answers[idx++] || "1";
+                document.getElementById(`t${tIdx}q${qIdx}`).value = answers[idx] || "1";
+                document.getElementById(`t${tIdx}q${qIdx}-value`).textContent = answers[idx] || "1";
+                idx++;
             });
         });
     }
