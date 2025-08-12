@@ -1,61 +1,188 @@
+/* Jungwacht Blauring Switzerland Brand Style – Minimalistic, Responsive, Chart-Optimized */
+
+/* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 2em;
-    background: #f9f9fc;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #fff;
+    color: #283583; /* Hauptfarbe Pantone Blau 072 */
+    margin: 0;
+    padding: 0;
+    line-height: 1.65;
 }
-h1 {
+
+/* Container styles */
+main, .container {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(40,53,131,0.07);
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #283583;
+    margin-top: 0;
     margin-bottom: 1em;
 }
+
+h1 {
+    font-size: 2.1em;
+}
+
+h2 {
+    font-size: 1.4em;
+    color: #164992; /* Sekundär-Blau 1 */
+}
+
+h3 {
+    font-size: 1.1em;
+    color: #66b1e2; /* Sekundär-Blau 2 */
+}
+
+/* Form elements */
 form div {
-    margin-bottom: 1.5em;
-    padding: 0.75em;
-    background: #fff;
+    margin-bottom: 1.2em;
+    padding: 0.75em 1em;
+    background: #f6faff; /* very light blue */
     border-radius: 8px;
-    box-shadow: 0 2px 6px #e9e9ef;
+    box-shadow: 0 2px 8px rgba(40,53,131,0.04);
 }
-form h2 {
-    margin-top: 0;
-}
+
 label {
     display: block;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
+    color: #283583;
 }
+
+input[type="range"].slider {
+    width: 150px;
+    accent-color: #66b1e2;
+}
+
 .slider-group {
     display: flex;
     align-items: center;
     gap: 1em;
     margin-bottom: 1em;
 }
+
 .slider-group span {
     min-width: 60px;
     text-align: center;
+    font-size: 0.95em;
+    color: #164992;
 }
+
 .slider-value {
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 1em;
+    color: #283583;
 }
-input[type="range"].slider {
-    width: 120px;
-}
+
 .button-group {
     margin-top: 1em;
     margin-bottom: 2em;
 }
+
 .button-group button {
-    margin-right: 1em;
-    margin-bottom: 0.5em;
+    background: #164992;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65em 1.2em;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(22,73,147,0.07);
+    transition: background 0.2s;
 }
-#chart-container {
-    margin-top: 2em;
-    max-width: 400px;
+.button-group button:hover {
+    background: #283583;
 }
+
+/* Feedback box */
 #feedback {
     margin-top: 2em;
-    background: #eef6fa;
-    padding: 1em;
+    background: #f6faff;
+    padding: 1.2em;
     border-radius: 8px;
-    box-shadow: 0 2px 4px #e0e0ee;
+    box-shadow: 0 2px 8px rgba(40,53,131,0.06);
 }
 #feedback h3 {
-    margin-bottom: 0.25em;
+    color: #283583;
+    margin-bottom: 0.4em;
+}
+
+/* Radar Chart container - responsive and centered */
+#chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em auto 2em auto;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 350px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(40,53,131,0.08);
+    padding: 2em 1em;
+}
+
+/* Radar Chart image or canvas */
+.radar-chart-img, canvas#radarChart {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* For print/PDF: higher contrast and thicker lines */
+    filter: drop-shadow(0 0 2px #283583) drop-shadow(0 0 4px #66b1e2);
+    background: #fff;
+}
+
+/* Print/PDF styles for chart */
+@media print {
+    body {
+        background: #fff !important;
+        color: #000;
+    }
+    #chart-container {
+        box-shadow: none;
+        border: 2px solid #283583;
+        background: #fff;
+        padding: 1em 0;
+        page-break-inside: avoid;
+    }
+    .radar-chart-img, canvas#radarChart {
+        filter: none;
+        border: 2px solid #66b1e2;
+        background: #fff;
+    }
+    #feedback, #chart-container {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+}
+
+/* Misc */
+@media (max-width: 600px) {
+    main, .container {
+        padding: 1em;
+    }
+    #chart-container {
+        padding: 1em 0.2em;
+        min-height: 220px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #f6faff;
+}
+::-webkit-scrollbar-thumb {
+    background: #66b1e2;
+    border-radius: 8px;
 }
