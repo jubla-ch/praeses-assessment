@@ -20,8 +20,22 @@ label {
     display: block;
     margin-bottom: 0.5em;
 }
-select {
+.slider-group {
+    display: flex;
+    align-items: center;
+    gap: 1em;
     margin-bottom: 1em;
+}
+.slider-group span {
+    min-width: 60px;
+    text-align: center;
+}
+.slider-value {
+    font-weight: bold;
+    margin-left: 1em;
+}
+input[type="range"].slider {
+    width: 120px;
 }
 .button-group {
     margin-top: 1em;
