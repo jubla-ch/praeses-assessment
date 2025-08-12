@@ -1,75 +1,89 @@
 [
     {
-        "id": "organisation",
-        "title": "Datenschutzorganisation",
+        "id": "rollenbewusstsein",
+        "title": "1. Integration & Rollenbewusstsein",
         "questions": [
-            "Gibt es eine Datenschutzstrategie?",
-            "Sind Verantwortlichkeiten klar geregelt?",
-            "Existiert ein Datenschutzteam?"
+            "Ich kann mich gut in die Schar einfügen und akzeptiere meine besondere Rolle als Präses.",
+            "Ich bin mir bewusst, dass ich nicht auf Freundschaften mit Leiter*innen angewiesen bin, um meine Aufgabe zu erfüllen.",
+            "Ich kann meine Rolle als Präses klar von der Leitungsrolle unterscheiden.",
+            "Ich reflektiere regelmässig meine Rolle und mein professionelles Handeln."
         ]
     },
     {
-        "id": "recht",
-        "title": "Rechtsgrundlagen",
+        "id": "beziehung",
+        "title": "Beziehung & Begleitung",
         "questions": [
-            "Werden die Rechtsgrundlagen regelmäßig geprüft?",
-            "Gibt es eine Dokumentation der Einwilligungen?",
-            "Werden Verträge mit Auftragsverarbeitern geprüft?",
-            "Ist die Datenschutzerklärung aktuell?"
+            "Ich gehe aktiv auf Menschen zu und bringe echtes Interesse am Gegenüber mit.",
+            "Ich kann eine wertschätzende, offene Haltung in der Begleitung zeigen.",
+            "Ich passe meine Begleitung der jeweiligen Situation und Person an.",
+            "Ich kenne meine eigenen Grenzen und kann diese kommunizieren.",
+            "Ich nutze geeignete Mittel zur Selbstwahrnehmung (z. B. Feedback durch Spiegelpersonen)."
         ]
     },
     {
-        "id": "prozesse",
-        "title": "Prozesse & Verfahren",
+        "id": "beratung",
+        "title": "Beratung & Konfliktkompetenz",
         "questions": [
-            "Sind Prozesse zur Datenverarbeitung dokumentiert?",
-            "Gibt es regelmäßige Überprüfungen der Verfahren?",
-            "Werden Änderungen dokumentiert?"
+            "Ich bin in der Lage, andere konstruktiv zu beraten.", 
+            "Ich kenne und nutze Methoden der Konfliktlösung.", 
+            "Ich spreche unerwünschtes Verhalten transparent an.", 
+            "Ich bin sensibilisiert für Machtmissbrauch und achte auf angemessene Nähe und Distanz.",
+            "Ich reflektiere mein Rollen- und Amtsverständnis kritisch." 
         ]
     },
     {
-        "id": "technisch",
-        "title": "Technische & organisatorische Maßnahmen",
+        "id": "spirituell",
+        "title": "Spirituelle Kompetenz",
         "questions": [
-            "Sind personenbezogene Daten verschlüsselt?",
-            "Gibt es Zugriffsbeschränkungen?",
-            "Werden IT-Systeme regelmäßig geprüft?"
+            "Ich unterstütze Kinder und Jugendliche auf ihrem Glaubensweg aktiv.",
+            "Ich kann spirituelle Erfahrungen initiieren und thematisieren.",
+            "Ich kenne spirituelle Methoden und setze sie passend ein.",
+            "Ich vertiefe meinen eigenen Glauben regelmässig.", 
+            "Ich bin offen für andere Glaubensüberzeugungen und kann mit Unterschieden umgehen."
         ]
     },
     {
-        "id": "mitarbeiter",
-        "title": "Mitarbeiterkompetenz",
+        "id": "gestaltung",
+        "title": "Gestaltung spiritueller Angebote",
         "questions": [
-            "Werden Mitarbeitende regelmäßig zum Datenschutz geschult?",
-            "Gibt es Sensibilisierungsmaßnahmen?",
-            "Existiert ein Meldeweg für Datenschutzverstöße?"
+            "Ich kann spirituelle Animationen (z. B. Gottesdienste, Rituale) altersgerecht gestalten.", 
+            "Ich bin kreativ in der Planung und Durchführung spiritueller Inhalte.", 
+            "Ich arbeite partizipativ und lasse andere mitgestalten.", 
+            "Ich handle angepasst an Anlass und Zielgruppe.", 
+            "Ich kenne die Werte und Grundsätze der Jubla und trage sie mit." 
         ]
     },
     {
-        "id": "betroffenenrechte",
-        "title": "Betroffenenrechte",
+        "id": "verein",
+        "title": "Vereins- & Verbandsverständnis",
         "questions": [
-            "Werden Auskunftsanfragen zeitnah bearbeitet?",
-            "Gibt es einen Prozess zur Datenlöschung?",
-            "Sind die Rechte der Betroffenen kommuniziert?"
+            "Ich verstehe die Strukturen und Abläufe der Jubla sowie deren verbandlichen Kontext.", 
+            "Ich kenne die Geschichte der Schar und ihre Verbindung zur Pfarrei.", 
+            "Ich nehme regelmässig am Höck teil und bringe mich dort ein.", 
+            "Ich bin mir meiner Rolle als Berater*in bewusst und handle zurückhaltend, wenn angemessen.", 
+            "Ich bin bereit, unterschiedliche Rollen einzunehmen und Verantwortung zu übernehmen." 
         ]
     },
     {
-        "id": "risiko",
-        "title": "Risiko & Vorfälle",
+        "id": "vernetzung",
+        "title": "Vernetzung & Lobbyarbeit",
         "questions": [
-            "Werden Datenschutzvorfälle dokumentiert?",
-            "Existiert ein Notfallplan?",
-            "Gibt es eine Risikoanalyse?"
+            "Ich kenne die kirchlichen und verbandlichen Netzwerke und pflege aktive Kontakte.", 
+            "Ich verstehe die Funktionsweise meiner Kirche vor Ort.", 
+            "Ich bin bereit, mich in Gremien mit Jubla-Anliegen einzubringen.", 
+            "Ich kann Spannungen aushalten und vermitteln.", 
+            "Ich zeige Interesse an der Zusammenarbeit mit externen Fachpersonen (z. B. Jugendarbeit, Seelsorge)." 
         ]
     },
     {
-        "id": "kontrolle",
-        "title": "Kontrolle & Audit",
+        "id": "selbstentwicklung",
+        "title": "Selbstentwicklung & Professionalität",
         "questions": [
-            "Werden Datenschutzmaßnahmen regelmäßig überprüft?",
-            "Gibt es interne oder externe Audits?",
-            "Werden Ergebnisse dokumentiert?"
+            "Ich reflektiere mein Handeln regelmässig und entwickle es weiter.", 
+            "Ich kenne meine Stärken und setze sie bewusst ein.",
+            "Ich bin bereit, mich in fachlichen Themen weiterzubilden.",
+            "Ich handle professionell und verantwortungsbewusst.",
+            "Ich bin erreichbar, zuverlässig und bodenständig."
         ]
     }
 ]
