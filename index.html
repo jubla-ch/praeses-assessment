@@ -15,17 +15,38 @@
 <body>
     <h1>Selbsteinschätzung für Präses</h1>
     <form id="survey-form"></form>
-    <div class="button-group">
-        <button id="submit-btn" type="button">Auswertung anzeigen</button>
-        <button id="pdf-btn" type="button">Ergebniss als PDF exportieren</button>
-        <button id="save-btn" type="button">Fortschritt speichern</button>
-        <button id="clear-btn" type="button">Fortschritt löschen</button>
-        <button id="link-btn" type="button">Link zum Fortschritt erzeugen</button>
-    </div>
+    <!-- Hamburger Menu Navigation replaces button-group -->
+    <nav class="menu">
+        <button class="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
+        <ul class="menu-list">
+            <li><button id="submit-btn" type="button">Auswertung anzeigen</button></li>
+            <li><button id="pdf-btn" type="button">Ergebniss als PDF exportieren</button></li>
+            <li><button id="save-btn" type="button">Fortschritt speichern</button></li>
+            <li><button id="clear-btn" type="button">Fortschritt löschen</button></li>
+            <li><button id="link-btn" type="button">Link zum Fortschritt erzeugen</button></li>
+        </ul>
+    </nav>
     <div id="chart-container">
         <canvas id="results-chart" width="400" height="400"></canvas>
     </div>
     <div id="feedback"></div>
     <script src="survey.js"></script>
+    <!-- Hamburger menu script -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuList = document.querySelector('.menu-list');
+        menuToggle.addEventListener('click', function() {
+            menuList.classList.toggle('open');
+        });
+        // Optional: Close menu when clicking outside or on a menu button
+        document.addEventListener('click', function(e) {
+            if (!menuList.contains(e.target) && !menuToggle.contains(e.target)) {
+                menuList.classList.remove('open');
+            }
+            if (e.target.matches('.menu-list button')) {
+                menuList.classList.remove('open');
+            }
+        });
+    </script>
 </body>
 </html>
