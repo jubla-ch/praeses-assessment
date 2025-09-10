@@ -13,6 +13,46 @@
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
+
+<!--        Hamburger Menu        -->
+<nav role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" id="menuCheckbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <!-- 
+      We can use a label here to close upon click (when doing same page navigation), this
+      does require a slight bit of JS.
+      -->
+      <li>
+        <a href="#">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
+        </a>
+      </li>
+      <li>
+        <a href="#about">
+          <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
+        </a>
+      </li>
+      
+      <!-- These just close the menu -->
+      <li><label for="menuCheckbox"><a>Info</a></label></li>
+      <li><label for="menuCheckbox"><a>Contact</a></label></li>
+      
+      <!-- Or just use regular URLs -->
+      <li>
+        <a href="https://google.com/" target="_blank">Show me more</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--        END Hamburger Menu        -->
+
+    
     <h1>Selbsteinschätzung für Präses</h1>
     <form id="survey-form"></form>
     <!-- Hamburger Menu Navigation replaces button-group -->
