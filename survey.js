@@ -187,6 +187,19 @@ async function exportPDF(questions, scores, feedback) {
     doc.save('Selbstbewertung.pdf');
 }
 
+// Utility: Add event listeners for both button and link triggers
+function addActionListener(idList, handler) {
+    idList.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.onclick = function(e) {
+                if (el.tagName === 'A') e.preventDefault();
+                handler();
+            };
+        }
+    });
+}
+
 // Main logic on page load
 window.onload = async function() {
     const { questions, feedback } = await loadData();
@@ -196,26 +209,41 @@ window.onload = async function() {
     loadProgress(questions);
     loadFromUrl(questions);
 
-    document.getElementById('submit-btn').onclick = function() {
-        const scores = calculateScores(questions);
-        showRadarChart(questions, scores);
-        showFeedback(questions, scores, feedback);
-    };
+    addActionListener(
+        ['submit-btn', 'show-results-link'],
+        function() {
+            const scores = calculateScores(questions);
+            showRadarChart(questions, scores);
+            showFeedback(questions, scores, feedback);
+        }
+    );
 
-    document.getElementById('pdf-btn').onclick = async function() {
-        const scores = calculateScores(questions);
-        await exportPDF(questions, scores, feedback);
-    };
+    addActionListener(
+        ['pdf-btn', 'export-pdf-link'],
+        async function() {
+            const scores = calculateScores(questions);
+            await exportPDF(questions, scores, feedback);
+        }
+    );
 
-    document.getElementById('save-btn').onclick = function() {
-        saveProgress(questions);
-    };
+    addActionListener(
+        ['save-btn', 'save-progress-link'],
+        function() {
+            saveProgress(questions);
+        }
+    );
 
-    document.getElementById('clear-btn').onclick = function() {
-        clearProgress();
-    };
+    addActionListener(
+        ['clear-btn', 'clear-progress-link'],
+        function() {
+            clearProgress();
+        }
+    );
 
-    document.getElementById('link-btn').onclick = function() {
-        getShareableLink(questions);
-    };
+    addActionListener(
+        ['link-btn', 'generate-link-link'],
+        function() {
+            getShareableLink(questions);
+        }
+    );
 };
