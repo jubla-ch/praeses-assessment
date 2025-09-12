@@ -10,24 +10,7 @@ body {
     line-height: 1.65;
 }
 
-main {
-  width: calc(100% - 240px);
-  max-width: 680px;
-  margin: 100px auto;
-}
-
-
-p {
-  font-size: 18px;
-  line-height: 28px;
-}
-
-* {
-  scroll-behavior: smooth;
-}
-
-
-
+/* Container styles */
 main, .container {
     max-width: 700px;
     margin: 2em auto;
@@ -44,88 +27,26 @@ h1, h2, h3 {
     margin-top: 0;
     margin-bottom: 1em;
 }
+
 h1 {
     font-size: 2.1em;
 }
+
 h2 {
     font-size: 1.4em;
     color: #164992; /* Sekundär-Blau 1 */
 }
+
 h3 {
     font-size: 1.1em;
     color: #66b1e2; /* Sekundär-Blau 2 */
-}
-
-/* Hamburger Menu Styles */
-.menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    padding: 0.5em 1em;
-    background: #fff;
-    border-bottom: 1px solid #f6faff;
-}
-.menu-list {
-    display: flex;
-    gap: 1.2em;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.menu-list li {
-    font-size: 1.1em;
-}
-.menu-list a {
-    color: #164992;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5em 1em;
-    border-radius: 6px;
-    transition: background 0.2s;
-}
-.menu-list a:hover {
-    background: #66b1e2;
-    color: #fff;
-}
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 2em;
-    color: #283583;
-    cursor: pointer;
-    margin-left: auto;
-}
-
-@media (max-width: 700px) {
-    .menu-list {
-        flex-direction: column;
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 220px;
-        background: #fff;
-        box-shadow: -2px 0 16px rgba(40,53,131,0.16);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        padding-top: 3em;
-        z-index: 1001;
-    }
-    .menu-list.open {
-        transform: translateX(0);
-    }
-    .menu-toggle {
-        display: block;
-    }
 }
 
 /* Form elements */
 form div {
     margin-bottom: 1.2em;
     padding: 0.75em 1em;
-    background: #f6faff;
+    background: #f6faff; /* very light blue */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(40,53,131,0.04);
 }
@@ -161,6 +82,27 @@ input[type="range"].slider {
     color: #283583;
 }
 
+.button-group {
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+.button-group button {
+    background: #164992;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65em 1.2em;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(22,73,147,0.07);
+    transition: background 0.2s;
+}
+.button-group button:hover {
+    background: #283583;
+}
+
 /* Feedback box */
 #feedback {
     margin-top: 2em;
@@ -187,193 +129,18 @@ input[type="range"].slider {
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(40,53,131,0.08);
     padding: 2em 1em;
-    overflow-x: auto;
 }
 
 /* Radar Chart image or canvas */
 .radar-chart-img, canvas#radarChart {
-    width: 100%;
-    max-width: 430px;
+    max-width: 100%;
     height: auto;
-    min-width: 220px;
     display: block;
     margin: 0 auto;
+    /* For print/PDF: higher contrast and thicker lines */
     filter: drop-shadow(0 0 2px #283583) drop-shadow(0 0 4px #66b1e2);
     background: #fff;
-    box-sizing: border-box;
 }
-
-@media (max-width: 600px) {
-    .container, main {
-        padding: 1.5em 0.8em;
-    }
-    #chart-container {
-        padding: 1em 0.4em;
-        min-height: 180px;
-    }
-    .radar-chart-img, canvas#radarChart {
-        max-width: 95vw;
-        min-width: 160px;
-    }
-}
-
-/*
- * START Hamburger menu
- */
-
-#menuToggle
-{
-  display: block;
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-#menuToggle a
-{
-  text-decoration: none;
-  color: #232323;
-  
-  transition: color 0.3s ease;
-}
-
-#menuToggle a:hover
-{
-  color: tomato;
-}
-
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
-}
-
-/*
- * Hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-/*
- * mittler verbergen
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * andere richtung
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * absolute position
- */
-#menu
-{
-  position: absolute;
-  max-width: 400px;
-  width: 100vw;
-  max-height: 100vh;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-#menu li label
-{
-  cursor: pointer;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
-/*
- * ENDE Hamburger menu
- */
-
 
 /* Print/PDF styles for chart */
 @media print {
@@ -392,12 +159,21 @@ input[type="range"].slider {
         filter: none;
         border: 2px solid #66b1e2;
         background: #fff;
-        width: 95vw !important;
-        max-width: 600px !important;
     }
     #feedback, #chart-container {
         break-inside: avoid;
         page-break-inside: avoid;
+    }
+}
+
+/* Misc */
+@media (max-width: 600px) {
+    main, .container {
+        padding: 1em;
+    }
+    #chart-container {
+        padding: 1em 0.2em;
+        min-height: 220px;
     }
 }
 
