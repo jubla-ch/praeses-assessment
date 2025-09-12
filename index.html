@@ -13,19 +13,38 @@
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
-    <h1>Selbsteinschätzung für Präses</h1>
-    <form id="survey-form"></form>
-    <div class="button-group">
-        <button id="submit-btn" type="button">Auswertung anzeigen</button>
-        <button id="pdf-btn" type="button">Ergebniss als PDF exportieren</button>
-        <button id="save-btn" type="button">Fortschritt speichern</button>
-        <button id="clear-btn" type="button">Fortschritt löschen</button>
-        <button id="link-btn" type="button">Link zum Fortschritt erzeugen</button>
+    <div class="header">
+        <span class="site-title">Selbsteinschätzung für Präses</span>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menü öffnen">&#9776;</button>
+        <nav class="menu" id="menu">
+            <a href="#" id="show-results-link">Auswertung anzeigen</a>
+            <a href="#" id="export-pdf-link">Ergebnis als PDF exportieren</a>
+            <a href="#" id="save-progress-link">Fortschritt speichern</a>
+            <a href="#" id="clear-progress-link">Fortschritt löschen</a>
+            <a href="#" id="generate-link-link">Link zum Fortschritt erzeugen</a>
+        </nav>
     </div>
-    <div id="chart-container">
-        <canvas id="results-chart" width="400" height="400"></canvas>
+    <div class="container">
+        <form id="survey-form"></form>
+        <div id="chart-container">
+            <canvas id="results-chart" width="400" height="400"></canvas>
+        </div>
+        <div id="feedback"></div>
     </div>
-    <div id="feedback"></div>
+    <script>
+        // Hamburger menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+        // Optional: Close menu on outside click (mobile-friendly)
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                menu.classList.remove('open');
+            }
+        });
+    </script>
     <script src="survey.js"></script>
 </body>
 </html>
