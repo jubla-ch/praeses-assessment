@@ -27,16 +27,13 @@ h1, h2, h3 {
     margin-top: 0;
     margin-bottom: 1em;
 }
-
 h1 {
     font-size: 2.1em;
 }
-
 h2 {
     font-size: 1.4em;
     color: #164992; /* Sekundär-Blau 1 */
 }
-
 h3 {
     font-size: 1.1em;
     color: #66b1e2; /* Sekundär-Blau 2 */
@@ -185,4 +182,78 @@ input[type="range"].slider {
 ::-webkit-scrollbar-thumb {
     background: #66b1e2;
     border-radius: 8px;
+}
+
+/* Sticky header and hamburger menu styles */
+.header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(40,53,131,0.03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #283583;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 3.2rem;
+    right: 1.2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 24px rgba(40,53,131,0.07);
+    min-width: 180px;
+}
+
+.menu.open {
+    display: block;
+}
+
+.menu a {
+    display: block;
+    padding: 0.9em 1.4em;
+    color: #283583;
+    text-decoration: none;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.menu a:last-child { border-bottom: none; }
+.menu a:hover { background: #f6faff; }
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: row;
+        padding: 0.5rem 0.5rem;
+    }
+    .site-title {
+        font-size: 1rem;
+    }
+    .container {
+        padding: 0.6rem;
+    }
+    .menu {
+        right: 0.5rem;
+        top: 2.8rem;
+        min-width: 140px;
+        font-size: 0.98em;
+    }
 }
