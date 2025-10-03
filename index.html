@@ -56,11 +56,12 @@
                 showResultsLink.click();
             });
         }
-        // Hamburger menu toggle vom Formular-Button triggert das Hauptmenü
+        // Hamburger menu toggle vom Formular-Button öffnet das Hauptmenü
         const menuToggleForm = document.getElementById('menu-toggle-form');
-        if (menuToggleForm && menuToggle) {
-            menuToggleForm.addEventListener('click', () => {
-                menu.classList.toggle('open');
+        if (menuToggleForm && menu) {
+            menuToggleForm.addEventListener('click', (e) => {
+                e.stopPropagation(); // Verhindert sofortiges Schließen
+                menu.classList.add('open');
             });
         }
     </script>
