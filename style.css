@@ -1,3 +1,15 @@
+/* Form Actions Styling */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+    margin: 2em 0 1.5em 0;
+    padding: 1em 1.5em;
+    background: #f6faff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(40,53,131,0.06);
+}
 /* Jungwacht Blauring Switzerland Brand Style – Minimalistic, Responsive, Chart-Optimized */
 
 /* Base styles */
