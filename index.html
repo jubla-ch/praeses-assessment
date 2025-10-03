@@ -26,7 +26,10 @@
     </div>
     <div class="container">
     <form id="survey-form"></form>
-    <button id="show-results-btn" type="button">Auswertung anzeigen</button>
+    <div class="form-actions">
+        <button id="show-results-btn" type="button">Auswertung anzeigen</button>
+        <button class="menu-toggle" id="menu-toggle-form" aria-label="Menü öffnen">&#9776;</button>
+    </div>
         <div id="chart-container">
             <canvas id="results-chart" width="400" height="400"></canvas>
         </div>
@@ -51,6 +54,13 @@
         if (showResultsBtn && showResultsLink) {
             showResultsBtn.addEventListener('click', (e) => {
                 showResultsLink.click();
+            });
+        }
+        // Hamburger menu toggle vom Formular-Button triggert das Hauptmenü
+        const menuToggleForm = document.getElementById('menu-toggle-form');
+        if (menuToggleForm && menuToggle) {
+            menuToggleForm.addEventListener('click', () => {
+                menu.classList.toggle('open');
             });
         }
     </script>
