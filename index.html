@@ -25,7 +25,8 @@
         </nav>
     </div>
     <div class="container">
-        <form id="survey-form"></form>
+    <form id="survey-form"></form>
+    <button id="show-results-btn" type="button">Auswertung anzeigen</button>
         <div id="chart-container">
             <canvas id="results-chart" width="400" height="400"></canvas>
         </div>
@@ -44,6 +45,14 @@
                 menu.classList.remove('open');
             }
         });
+        // Button am Ende des Formulars mit gleicher Funktion wie Menü-Link
+        const showResultsBtn = document.getElementById('show-results-btn');
+        const showResultsLink = document.getElementById('show-results-link');
+        if (showResultsBtn && showResultsLink) {
+            showResultsBtn.addEventListener('click', (e) => {
+                showResultsLink.click();
+            });
+        }
     </script>
     <script src="survey.js"></script>
 </body>
