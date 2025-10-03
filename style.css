@@ -1,3 +1,19 @@
+.primary-action {
+    background: #164992;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.65em 1.2em;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(22,73,147,0.07);
+    transition: background 0.2s;
+    margin-right: 0.5em;
+}
+.primary-action:hover {
+    background: #283583;
+}
 /* Form Actions Styling */
 .form-actions {
     display: flex;

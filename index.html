@@ -27,7 +27,7 @@
     <div class="container">
     <form id="survey-form"></form>
     <div class="form-actions">
-        
+        <button id="show-results-btn" type="button" class="primary-action">Auswertung anzeigen</button>
         <button class="menu-toggle" id="menu-toggle-form" aria-label="Menü öffnen">&#9776;</button>
     </div>
         <div id="chart-container">
@@ -55,6 +55,14 @@
             menuToggleForm.addEventListener('click', (e) => {
                 e.stopPropagation(); // Verhindert sofortiges Schließen
                 menu.classList.add('open');
+            });
+        }
+        // Button im form-actions mit gleicher Funktion wie Menü-Link
+        const showResultsBtn = document.getElementById('show-results-btn');
+        const showResultsLink = document.getElementById('show-results-link');
+        if (showResultsBtn && showResultsLink) {
+            showResultsBtn.addEventListener('click', (e) => {
+                showResultsLink.click();
             });
         }
     </script>
