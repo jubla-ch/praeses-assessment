@@ -167,15 +167,16 @@ async function exportPDF(questions, scores, feedback) {
     doc.setFontSize(18);
     doc.text("Selbsteinschätzung für Präses mit Spider-Auswertung", 10, 15);
 
-    // Capture chart as image
+    // Spider-Grafik kleiner und mittig einfügen
     const chartCanvas = document.getElementById('results-chart');
     const imgData = await html2canvas(chartCanvas).then(canvas => canvas.toDataURL('image/png'));
-    doc.addImage(imgData, 'PNG', 10, 25, 180, 90);
+    doc.addImage(imgData, 'PNG', 60, 25, 90, 90); // mittig, kleiner
 
     doc.setFontSize(12);
     let yOffset = 120;
     questions.forEach((topic, idx) => {
-        if (yOffset > 270) {
+        // Vor jedem Block prüfen, ob genug Platz für QR und Link ist
+        if (yOffset > 250) {
             doc.addPage();
             yOffset = 20;
         }
@@ -189,12 +190,14 @@ async function exportPDF(questions, scores, feedback) {
                 yOffset += 6;
             });
             yOffset += 2;
-            // QR-Code und Link einfügen
+            // QR-Code und Link einfügen, vorher Platz prüfen
             if (fbObj.link_url) {
-                // QR-Code generieren
+                if (yOffset > 250) {
+                    doc.addPage();
+                    yOffset = 20;
+                }
                 const qr = new QRious({ value: fbObj.link_url, size: 60 });
                 doc.addImage(qr.toDataURL(), 'PNG', 10, yOffset, 20, 20);
-                // Link als Text daneben in kleiner Schrift
                 doc.setFontSize(8);
                 doc.setTextColor(0, 0, 255);
                 doc.textWithLink(fbObj.link_url, 35, yOffset + 10, { url: fbObj.link_url });
