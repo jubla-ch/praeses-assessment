@@ -114,8 +114,12 @@ function loadProgress(questions) {
     if (answers) {
         answers.forEach((topicAnswers, tIdx) => {
             topicAnswers.forEach((val, qIdx) => {
-                document.getElementById(`t${tIdx}q${qIdx}`).value = val;
-                document.getElementById(`t${tIdx}q${qIdx}-value`).textContent = val;
+                const slider = document.getElementById(`t${tIdx}q${qIdx}`);
+                const valueSpan = document.getElementById(`t${tIdx}q${qIdx}-value`);
+                if (slider && valueSpan) {
+                    slider.value = val;
+                    valueSpan.textContent = val;
+                }
             });
         });
     }
