@@ -1,5 +1,15 @@
 [
     {
+        "id": "rollenbewusstsein",
+        "title": "Integration & Rollenbewusstsein",
+        "questions": [
+            "Ich kann mich gut in die Schar einfügen und akzeptiere meine besondere Rolle als Präses.",
+            "Ich bin mir bewusst, dass ich nicht auf Freundschaften mit Leiter*innen angewiesen bin, um meine Aufgabe zu erfüllen.",
+            "Ich kann meine Rolle als Präses klar von der Leitungsrolle unterscheiden.",
+            "Ich reflektiere regelmässig meine Rolle und mein professionelles Handeln."
+        ]
+    },
+    {
         "id": "beziehung",
         "title": "Beziehung & Begleitung",
         "questions": [
@@ -75,15 +85,5 @@
             "Ich handle professionell und verantwortungsbewusst.",
             "Ich bin erreichbar, zuverlässig und bodenständig."
         ]
-    },
-        {
-        "id": "rollenbewusstsein",
-        "title": "Integration & Rollenbewusstsein",
-        "questions": [
-            "Ich kann mich gut in die Schar einfügen und akzeptiere meine besondere Rolle als Präses.",
-            "Ich bin mir bewusst, dass ich nicht auf Freundschaften mit Leiter*innen angewiesen bin, um meine Aufgabe zu erfüllen.",
-            "Ich kann meine Rolle als Präses klar von der Leitungsrolle unterscheiden.",
-            "Ich reflektiere regelmässig meine Rolle und mein professionelles Handeln."
-        ]
-    },
+    }
 ]
