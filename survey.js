@@ -188,6 +188,20 @@ async function exportPDF(questions, scores, feedback) {
                 doc.text(line, 10, yOffset);
                 yOffset += 6;
             });
+            yOffset += 2;
+            // QR-Code und Link einfügen
+            if (fbObj.link_url) {
+                // QR-Code generieren
+                const qr = new QRious({ value: fbObj.link_url, size: 60 });
+                doc.addImage(qr.toDataURL(), 'PNG', 10, yOffset, 20, 20);
+                // Link als Text daneben in kleiner Schrift
+                doc.setFontSize(8);
+                doc.setTextColor(0, 0, 255);
+                doc.textWithLink(fbObj.link_url, 35, yOffset + 10, { url: fbObj.link_url });
+                doc.setTextColor(0, 0, 0);
+                doc.setFontSize(12);
+                yOffset += 24;
+            }
             yOffset += 4;
         }
     });
